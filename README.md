@@ -4,21 +4,39 @@ This repository contains an applicaiton that has some issues that need to be fix
 
 * Dependency missing from `package.json`.
 
-  Removed `express`:
+  Removed `ejs`:
 
   ```
-  "express": "~4.15.5",
+  "ejs": "~2.5.7",
+  ```
+
+  Produces error and stacktrace:
+
+  ```
+  Error: Cannot find module 'ejs'
+    at Function.Module._resolveFilename (module.js:469:15)
+    at Function.Module._load (module.js:417:25)
+    at Module.require (module.js:497:17)
+    at require (internal/module.js:20:19)
+    at new View (/Users/mgub/Workspace/Checkouts/Horizons/aws-devops-heroku-buggy/node_modules/express/lib/view.js:79:30)
+    at EventEmitter.render (/Users/mgub/Workspace/Checkouts/Horizons/aws-devops-heroku-buggy/node_modules/express/lib/application.js:570:12)
+    at ServerResponse.render (/Users/mgub/Workspace/Checkouts/Horizons/aws-devops-heroku-buggy/node_modules/express/lib/response.js:971:7)
+    at /Users/mgub/Workspace/Checkouts/Horizons/aws-devops-heroku-buggy/app.js:43:7
+    at Layer.handle_error (/Users/mgub/Workspace/Checkouts/Horizons/aws-devops-heroku-buggy/node_modules/express/lib/router/layer.js:71:5)
+    at trim_prefix (/Users/mgub/Workspace/Checkouts/Horizons/aws-devops-heroku-buggy/node_modules/express/lib/router/app.js:315:13)
   ```
 
 * Production dependency marked as dev dependency.
 
-  Moved `body-parser` into `devDependencies`:
+  Moved `express` into `devDependencies`:
 
   ```
   "devDependencies": {
-    "body-parser": "~1.18.2"
+    "express": "~4.15.5",
   }
   ```
+
+  Runs fine locally, but when deployed, produces "Internal Server Error" error.
 
 * Missing start script.
 
@@ -26,10 +44,10 @@ This repository contains an applicaiton that has some issues that need to be fix
 
 * Application listens to static port instead of reading `process.env.PORT`.
 
-  In `index.js`, removed the line:
+  In `app.js`, removed the line:
 
   ```
-  var port = normalizePort(process.env.PORT || "5000")
+  var port = parseInt(process.env.PORT, 10) || 5000
   ```
 
   Replaced it with:
