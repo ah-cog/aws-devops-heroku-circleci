@@ -25,6 +25,7 @@
 	"homepage":
 		"https://github.com/horizons-school-of-technology/aws-devops-heroku-buggy#readme",
 	"dependencies": {
+		"express": "~4.15.5",
 		"cookie-parser": "~1.4.3",
 		"debug": "~2.6.9",
 		"ejs": "~2.5.7",
