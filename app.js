@@ -52,8 +52,8 @@ app.use(function(err, req, res, next) {
  * Get port from environment and store in Express.
  */
 
-// var port = parseInt(process.env.PORT, 10) || 5000
-var port = 5000
+var port = parseInt(process.env.PORT, 10) || 5000
+// var port = 5000
 app.set("port", port)
 
 /**
