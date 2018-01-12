@@ -8,6 +8,7 @@
 	},
 	"main": "app.js",
 	"scripts": {
+		"start": "node app.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"repository": {
@@ -28,8 +29,7 @@
 		"cookie-parser": "~1.4.3",
 		"debug": "~2.6.9",
 		"ejs": "~2.5.7",
-		"morgan": "~1.9.0",
-		"serve-favicon": "~2.4.5"
+		"morgan": "~1.9.0"
 	},
 	"devDependencies": {
 		"express": "~4.15.5"

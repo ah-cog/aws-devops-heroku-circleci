@@ -10,7 +10,7 @@ This repository contains an applicaiton that has some issues that need to be fix
   "ejs": "~2.5.7",
   ```
 
-  Produces error and stacktrace:
+  No error is thrown during `npm install`. However, when you attempt to access the application from a browser, you'll be shown the following error and stack trace:
 
   ```
   Error: Cannot find module 'ejs'
@@ -25,6 +25,8 @@ This repository contains an applicaiton that has some issues that need to be fix
     at Layer.handle_error (/Users/mgub/Workspace/Checkouts/Horizons/aws-devops-heroku-buggy/node_modules/express/lib/router/layer.js:71:5)
     at trim_prefix (/Users/mgub/Workspace/Checkouts/Horizons/aws-devops-heroku-buggy/node_modules/express/lib/router/app.js:315:13)
   ```
+
+  This error and stack trace will also be shown in the console where you entered the `npm start` command to start the application server.
 
 * Production dependency marked as dev dependency.
 
