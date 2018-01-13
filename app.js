@@ -44,8 +44,8 @@ app.use(function(err, req, res, next) {
 })
 
 // Set port from environment.
-// var port = parseInt(process.env.PORT, 10) || 5000
-var port = 5000
+var port = parseInt(process.env.PORT, 10) || 5000
+// var port = 5000
 app.set("port", port)
 
 // Create HTTP server.
