@@ -24,6 +24,12 @@ jobs:
       - run:
           name: tests
           command: npm test
+      - run:
+        - command: |
+            echo "Inspecting environment."
+            pwd
+            ls
+            printenv
       - run: echo "Hello from CircleCI!"
 
     # FROM DEFAULT TEMPLATE:
