@@ -21,9 +21,10 @@ jobs:
       - run:
           name: install-dependencies
           command: npm install
-      - run:
-          name: tests
-          command: npm test
+      # - run:
+      #     name: tests
+      #     command: npm test
+      - run: echo "Hello from CircleCI!"
 
     # FROM DEFAULT TEMPLATE:
     # steps:
