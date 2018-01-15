@@ -25,7 +25,7 @@ jobs:
           name: tests
           command: npm test
       - run:
-        - command: |
+          command: |
             echo "Inspecting environment."
             pwd
             ls
