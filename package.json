@@ -1,10 +1,13 @@
 {
-	"name": "aws-devops-heroku-buggy",
+	"name": "aws-devops-heroku-circleci",
 	"version": "1.0.0",
 	"description":
 		"This repository contains an applicaiton that has some issues that need to be fixed before it can be deployed to Heroku.",
 	"engines": {
 		"node": "8.9.1"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"main": "app.js",
 	"repository": {
