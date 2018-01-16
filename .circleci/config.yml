@@ -29,17 +29,17 @@ jobs:
       - run:
           name: tests
           command: npm test
+      - run: echo "Hello from CircleCI!"
+      - run: bash .circleci/setup-heroku.sh
+      - add_ssh_keys:
+          fingerprints:
+            - "c3:50:39:8e:6a:94:14:ed:a7:8e:36:bc:d8:14:86:d8"
       - run:
           command: |
             echo "Inspecting environment."
             pwd
             ls
             printenv
-      - run: echo "Hello from CircleCI!"
-      - run: bash .circleci/setup-heroku.sh
-      - add_ssh_keys:
-          fingerprints:
-            - "c3:50:39:8e:6a:94:14:ed:a7:8e:36:bc:d8:14:86:d8"
       - deploy:
           name: Deploy Master to Heroku
           command: |
