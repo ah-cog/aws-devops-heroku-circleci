@@ -50,11 +50,23 @@ jobs:
   #           # heroku run python manage.py deploy
   #           heroku restart
 
- workflows:
-   version: 2
-   build-deploy:
-     jobs:
-       - build
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
+      # - test:
+      #     requires:
+      #       - build
+      #     filters:
+      #       branches:
+      #         only: master
+
+#  workflows:
+#    version: 2
+#    build-deploy:
+#      jobs:
+#        - build
       #  - deploy-job:
       #      requires:
       #        - build-job
