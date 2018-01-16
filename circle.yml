@@ -1,0 +1,15 @@
+machine:
+  node:
+    version: 8.2.0
+
+# test:
+#   post:
+#     - bundle exec rake spinach:
+#         environment:
+#           RAILS_ENV: test
+
+deployment:
+  staging:
+    branch: master
+    heroku:
+      appname: mysterious-shelf-73986
