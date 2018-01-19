@@ -9,22 +9,11 @@
 	"scripts": {
 		"start": "node app.js",
 		"jobserver": "node jobserver.js",
-		"test": "./node_modules/mocha/bin/mocha --timeout 10000"
+		"test": "./node_modules/mocha/bin/mocha --exit"
 	},
 	"main": "app.js",
-	"repository": {
-		"type": "git",
-		"url":
-			"git+https://github.com/horizons-school-of-technology/aws-devops-heroku-buggy.git"
-	},
 	"author": "",
 	"license": "ISC",
-	"bugs": {
-		"url":
-			"https://github.com/horizons-school-of-technology/aws-devops-heroku-buggy/issues"
-	},
-	"homepage":
-		"https://github.com/horizons-school-of-technology/aws-devops-heroku-buggy#readme",
 	"dependencies": {
 		"body-parser": "~1.18.2",
 		"chai": "^4.1.2",
