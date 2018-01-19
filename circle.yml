@@ -12,4 +12,4 @@ deployment:
   staging:
     branch: master
     heroku:
-      appname: mysterious-shelf-73986
+      appname: gentle-temple-12070
