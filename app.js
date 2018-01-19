@@ -52,3 +52,5 @@ var server = http.createServer(app)
 
 // Listen on provided port, on all network interfaces.
 server.listen(port)
+
+module.exports = app
