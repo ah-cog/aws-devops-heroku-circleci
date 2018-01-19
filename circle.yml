@@ -4,9 +4,9 @@ machine:
 
 test:
   post:
-    - echo "CircleCI pre test script..."
+    - echo "CircleCI pre test script."
   post:
-    - echo "CircleCI post test script..."
+    - echo "CircleCI post test script."
 
 deployment:
   staging:
